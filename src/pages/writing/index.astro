@@ -1,0 +1,105 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("posts")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Writing — Akhil Venkatesh" active="writing">
+  <section class="section header-section">
+    <div class="eyebrow">// writing</div>
+    <h1 class="page-title">Notes on building.</h1>
+    <p class="page-blurb">
+      Occasional writing on Zoho architecture, Deluge, and giving internal tools the craft usually reserved
+      for products.
+    </p>
+  </section>
+
+  <section class="section list-section">
+    <div class="post-list">
+      {posts.map((post) => (
+        <a href={`/writing/${post.id}`} class="post-row">
+          <span class="mono post-date">{post.data.date}</span>
+          <span>
+            <span class="post-title">{post.data.title}</span>
+            <span class="post-subtitle">{post.data.subtitle}</span>
+          </span>
+          <span class="mono post-read">{post.data.read}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .header-section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .page-title {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  .page-blurb {
+    margin-top: 24px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 560px;
+  }
+
+  .list-section {
+    padding-top: 24px;
+    padding-bottom: 72px;
+  }
+  .post-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 90px;
+    gap: 28px;
+    align-items: baseline;
+    padding: 30px 4px;
+    border-top: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+  }
+  .post-row:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+  .post-date {
+    font-size: 13px;
+    color: var(--faint);
+  }
+  .post-title {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    color: var(--ink);
+  }
+  .post-subtitle {
+    font-size: 16px;
+    color: var(--muted);
+    display: block;
+    margin-top: 8px;
+    max-width: 560px;
+  }
+  .post-read {
+    font-size: 13px;
+    color: var(--faint);
+    text-align: right;
+  }
+
+  @media (max-width: 700px) {
+    .post-row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .post-read {
+      text-align: left;
+    }
+  }
+</style>

@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact — Akhil Venkatesh" active="contact">
+  <section class="container contact-section">
+    <div class="surface contact-card">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="eyebrow">// contact</div>
+      <h1 class="title">Let&rsquo;s build something <span class="accent-text">dependable</span>.</h1>
+      <p class="sub">
+        Available for enterprise application work and interesting product problems. The fastest way to
+        reach me is email.
+      </p>
+
+      <div class="ctas">
+        <a href="mailto:akhiltechwiz@gmail.com" class="btn btn-primary">akhiltechwiz@gmail.com</a>
+        <a href="tel:+6585449571" class="btn btn-secondary">+65 8544 9571</a>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-item">
+          <div class="mono detail-label">EMAIL</div>
+          <a href="mailto:akhiltechwiz@gmail.com" class="detail-value">akhiltechwiz@gmail.com</a>
+        </div>
+        <div class="detail-item">
+          <div class="mono detail-label">LINKEDIN</div>
+          <a href="/contact" class="detail-value">/in/akhil ↗</a>
+        </div>
+        <div class="detail-item">
+          <div class="mono detail-label">LOCATION</div>
+          <span class="detail-value">Singapore · GMT+8</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 72px);
+  }
+  .contact-section {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 48px;
+    flex: 1;
+  }
+  .contact-card {
+    padding: 72px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .glow {
+    position: absolute;
+    top: -70px;
+    right: -40px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.14;
+  }
+  .title {
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    max-width: 660px;
+    line-height: 1.02;
+  }
+  .accent-text {
+    color: var(--accent);
+  }
+  .sub {
+    margin: 24px 0 44px;
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.6;
+  }
+  .ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .ctas .btn {
+    padding: 16px 30px;
+    font-size: 16px;
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 640px;
+  }
+  .detail-item {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  .detail-label {
+    font-size: 12px;
+    color: var(--faint);
+    margin-bottom: 6px;
+  }
+  .detail-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+    .contact-card {
+      padding: 48px 28px;
+    }
+  }
+</style>

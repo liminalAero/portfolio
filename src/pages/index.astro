@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Akhil Venkatesh — Enterprise Application Developer" active="">
+  <header class="hero container">
+    <div class="hero-content">
+      <div class="available-badge"><span class="badge-dot"></span>Open to new work</div>
+      <h1 class="hero-title">Software teams <span class="accent-text">actually like</span> using.</h1>
+      <p class="hero-sub">
+        I'm Akhil — an enterprise application developer with 7 years in the Zoho ecosystem, React &amp;
+        TypeScript. I turn messy operations into calm, dependable tools.
+      </p>
+      <div class="hero-ctas">
+        <a href="/work" class="btn btn-primary">See selected work</a>
+        <a href="/contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="pill">React · TypeScript</span>
+      <span class="pill">Zoho Creator · Deluge</span>
+      <span class="pill">FastAPI · Next.js</span>
+      <span class="pill">Tailwind · shadcn</span>
+      <span class="pill">Postgres · SQLite</span>
+    </div>
+  </header>
+
+  <section class="section">
+    <a href="/contact" class="contact-cta surface">
+      <div>
+        <div class="cta-title">Have a project in mind?</div>
+        <div class="cta-sub">Available for enterprise application work — let's talk.</div>
+      </div>
+      <span class="btn btn-primary cta-btn">Get in touch →</span>
+    </a>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 48px;
+  }
+  .hero-content {
+    max-width: 700px;
+  }
+  .available-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-soft);
+    color: var(--accent-on-soft);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--dot);
+  }
+  .hero-title {
+    font-weight: 700;
+    font-size: 66px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+  .accent-text {
+    color: var(--accent);
+  }
+  .hero-sub {
+    margin-top: 28px;
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 460px;
+    color: var(--muted);
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    margin-top: 36px;
+  }
+  .tag-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 52px;
+  }
+
+  .contact-cta {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 44px 48px;
+    color: inherit;
+  }
+  .cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .cta-sub {
+    font-size: 16px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .cta-btn {
+    white-space: nowrap;
+  }
+
+</style>
