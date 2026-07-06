@@ -20,7 +20,6 @@ export default function ContactPage() {
 
         <div className={styles.ctas}>
           <a href="mailto:akhiltechwiz@gmail.com" className="btn btn-primary">akhiltechwiz@gmail.com</a>
-          <a href="tel:+6585449571" className="btn btn-secondary">+65 8544 9571</a>
         </div>
 
         <div className={styles.detailGrid}>

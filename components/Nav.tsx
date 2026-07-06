@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import styles from "./Nav.module.css";
 
 const links = [
-
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/writing", label: "Writing" },
@@ -40,10 +40,6 @@ export default function Nav() {
   return (
     <div className={styles.navBar}>
       <div className={`container ${styles.navInner}`}>
-        <Link href="/" className={styles.logo}>
-          <span className={styles.logoDot}></span>akhil.dev
-        </Link>
-
         <nav className={styles.navLinks}>
           {links.map((l) => {
             const isActive = pathname === l.href || pathname.startsWith(`${l.href}/`);

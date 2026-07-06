@@ -9,11 +9,11 @@
   --muted: #b6bca8;
   --faint: #9aa08c;
   --border: rgba(233, 236, 223, 0.1);
-  --accent: oklch(0.78 0.13 195);
-  --accent-strong: oklch(0.82 0.13 195);
+  --accent: oklch(0.62 0.11 195);
+  --accent-strong: oklch(0.66 0.11 195);
   --accent-soft: oklch(0.32 0.06 195);
-  --accent-on-soft: oklch(0.84 0.12 195);
-  --dot: oklch(0.72 0.13 195);
+  --accent-on-soft: oklch(0.68 0.11 195);
+  --dot: oklch(0.56 0.11 195);
   --accent-ink: #10140f;
 }
 [data-theme="light"] {

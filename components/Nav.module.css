@@ -16,21 +16,6 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-.logo {
-  font-weight: 700;
-  font-size: 19px;
-  color: var(--ink);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logoDot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--dot);
-}
 .navLinks {
   display: flex;
   align-items: center;
