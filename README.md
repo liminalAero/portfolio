@@ -1,43 +1,44 @@
-# Astro Starter Kit: Minimal
+# Portfolio site
 
-```sh
-npm create astro@latest -- --template minimal
+A personal portfolio and blog built with [Next.js](https://nextjs.org) (App Router).
+
+## Project structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+├── app/                  routes (App Router)
+│   ├── work/             work listing + [slug] detail pages
+│   └── writing/          writing listing + [slug] detail pages (markdown)
+├── components/           Nav, Footer
+├── content/posts/        markdown blog posts
+├── lib/                  data (work.ts, projects.ts) + markdown loader (posts.ts)
+└── public/               static assets
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Commands
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Command         | Action                                      |
+| :-------------- | :------------------------------------------ |
+| `npm install`   | Install dependencies                        |
+| `npm run dev`   | Start local dev server at `localhost:3000`  |
+| `npm run build` | Build the production site to `./.next/`     |
+| `npm run start` | Serve the production build locally          |
+| `npm run lint`  | Run Next.js/ESLint checks                   |
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Adding a blog post
 
-## 🧞 Commands
+Add a markdown file to `content/posts/` with frontmatter:
 
-All commands are run from the root of the project, from a terminal:
+```md
+---
+title: Post title
+subtitle: One-line subtitle
+date: Mon YYYY
+read: N min read
+order: 1
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Post body in markdown.
+```
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`order` controls sort position on the writing index (lower first).

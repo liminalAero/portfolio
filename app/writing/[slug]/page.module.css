@@ -1,0 +1,117 @@
+.headerSection {
+  padding-top: 56px;
+  padding-bottom: 8px;
+}
+.backLink {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.postMeta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 32px 0 18px;
+  font-size: 13px;
+  color: var(--accent-on-soft);
+}
+.dotSep,
+.faintText {
+  color: var(--faint);
+}
+.title {
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+.subtitle {
+  margin-top: 22px;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.bodySection {
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+.bodyInner {
+  border-top: 1px solid var(--border);
+  padding-top: 36px;
+}
+.bodyInner :global(h2) {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 34px 0 14px;
+}
+.bodyInner :global(p) {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+.bodyInner :global(> *:first-child) {
+  margin-top: 0;
+}
+
+.authorSection {
+  padding-top: 8px;
+  padding-bottom: 32px;
+}
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+.authorAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent-on-soft);
+}
+.authorName {
+  font-size: 16px;
+  font-weight: 700;
+}
+.authorRole {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nextSection {
+  padding-top: 16px;
+  padding-bottom: 72px;
+}
+.nextCard {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 30px 36px;
+  color: inherit;
+}
+.nextLabel {
+  font-size: 13px;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+.nextTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  max-width: 440px;
+}
+.nextBtn {
+  white-space: nowrap;
+}

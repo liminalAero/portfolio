@@ -1,0 +1,70 @@
+.headerSection {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.pageTitle {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.pageBlurb {
+  margin-top: 24px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.listSection {
+  padding-top: 24px;
+  padding-bottom: 72px;
+}
+.postList {
+  display: flex;
+  flex-direction: column;
+}
+.postRow {
+  display: grid;
+  grid-template-columns: 130px 1fr 90px;
+  gap: 28px;
+  align-items: baseline;
+  padding: 30px 4px;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+.postRow:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.postDate {
+  font-size: 13px;
+  color: var(--faint);
+}
+.postTitle {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  color: var(--ink);
+}
+.postSubtitle {
+  font-size: 16px;
+  color: var(--muted);
+  display: block;
+  margin-top: 8px;
+  max-width: 560px;
+}
+.postRead {
+  font-size: 13px;
+  color: var(--faint);
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .postRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .postRead {
+    text-align: left;
+  }
+}

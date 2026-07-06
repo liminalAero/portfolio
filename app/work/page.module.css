@@ -1,0 +1,151 @@
+.headerSection {
+  padding-top: 80px;
+  padding-bottom: 32px;
+}
+.pageTitle {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  max-width: 820px;
+  line-height: 1.04;
+}
+.pageBlurb {
+  margin-top: 24px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.tabsSection {
+  padding-top: 16px;
+  padding-bottom: 0;
+}
+.tabsBar {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 5px;
+}
+.tabBtn {
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 9px 22px;
+  border-radius: 8px;
+}
+.tabBtnActive {
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.tagSection {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+.tagRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tagPill {
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 15px;
+  border-radius: 999px;
+}
+.tagPillActive {
+  font-weight: 600;
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.countText {
+  font-size: 13px;
+  color: var(--faint);
+  margin-left: 6px;
+}
+
+.gridSection {
+  padding-top: 24px;
+  padding-bottom: 72px;
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.card {
+  text-decoration: none;
+  color: inherit;
+  padding: 34px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.cardBlob {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.9;
+}
+.cardMeta {
+  font-size: 13px;
+  color: var(--accent-on-soft);
+  margin-bottom: 52px;
+}
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.cardDesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.cardTags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.liveTag {
+  font-size: 12px;
+  color: var(--accent-on-soft);
+  margin-left: auto;
+}
+
+.emptyState {
+  border: 1px dashed var(--border);
+  border-radius: 18px;
+  padding: 56px;
+  text-align: center;
+  color: var(--faint);
+  font-size: 14px;
+}
+
+@media (max-width: 860px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

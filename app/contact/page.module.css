@@ -1,0 +1,78 @@
+.contactSection {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 48px;
+  flex: 1;
+}
+.contactCard {
+  padding: 72px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.glow {
+  position: absolute;
+  top: -70px;
+  right: -40px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.14;
+}
+.title {
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  max-width: 660px;
+  line-height: 1.02;
+}
+.accentText {
+  color: var(--accent);
+}
+.sub {
+  margin: 24px 0 44px;
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.6;
+}
+.ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.ctas :global(.btn) {
+  padding: 16px 30px;
+  font-size: 16px;
+}
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 640px;
+}
+.detailItem {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.detailLabel {
+  font-size: 12px;
+  color: var(--faint);
+  margin-bottom: 6px;
+}
+.detailValue {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+  .contactCard {
+    padding: 48px 28px;
+  }
+}

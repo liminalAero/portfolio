@@ -1,22 +1,28 @@
 ## Development
 
-When starting the dev server, use background mode:
+Start the dev server with:
 
 ```
-astro dev --background
+npm run dev
 ```
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+Build and type-check with `npm run build`.
 
 ## Documentation
 
-Full documentation: https://docs.astro.build
+Full documentation: https://nextjs.org/docs
 
 Consult these guides before working on related tasks:
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- [Routing (App Router)](https://nextjs.org/docs/app/building-your-application/routing)
+- [Server and Client Components](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns)
+- [Data fetching & static generation](https://nextjs.org/docs/app/building-your-application/data-fetching)
+- [Styling (CSS Modules, global CSS)](https://nextjs.org/docs/app/building-your-application/styling)
+- [Metadata & SEO](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
+
+## Project structure
+
+- `app/` — routes (App Router). Each page ships its own `page.module.css` alongside `page.tsx`.
+- `components/` — shared `Nav`/`Footer` components.
+- `lib/` — data (`work.ts`, `projects.ts`) and the markdown post loader (`posts.ts`).
+- `content/posts/` — markdown blog posts (frontmatter: `title`, `subtitle`, `date`, `read`, `order`).

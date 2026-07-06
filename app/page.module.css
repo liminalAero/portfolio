@@ -1,0 +1,77 @@
+.hero {
+  padding-top: 80px;
+  padding-bottom: 48px;
+}
+.heroContent {
+  max-width: 700px;
+}
+.availableBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  color: var(--accent-on-soft);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--dot);
+}
+.heroTitle {
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+.accentText {
+  color: var(--accent);
+}
+.heroSub {
+  margin-top: 28px;
+  font-size: 19px;
+  line-height: 1.6;
+  max-width: 460px;
+  color: var(--muted);
+}
+.heroCtas {
+  display: flex;
+  gap: 12px;
+  margin-top: 36px;
+}
+.tagRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 52px;
+}
+
+.contactCta {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  padding: 44px 48px;
+  color: inherit;
+}
+.ctaTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.ctaSub {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.ctaBtn {
+  white-space: nowrap;
+}

@@ -1,0 +1,41 @@
+.siteFooter {
+  border-top: 1px solid var(--border);
+}
+.footerInner {
+  padding-top: 36px;
+  padding-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footerLogo {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footerDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--dot);
+}
+.footerLinks {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footerLinks a {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.footerCopy {
+  font-size: 13px;
+  color: var(--faint);
+}
