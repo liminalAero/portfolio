@@ -13,6 +13,12 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
+function setFavicon(theme: string) {
+  const href = theme === "light" ? "/favicon-light.svg" : "/icon.svg";
+  const link = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
+  if (link) link.href = href;
+}
+
 function setTheme(value: string) {
   try {
     localStorage.setItem("pf-theme", value);
@@ -20,6 +26,7 @@ function setTheme(value: string) {
     /* localStorage unavailable (private mode / disabled) — attribute still updates for this load */
   }
   document.documentElement.setAttribute("data-theme", value);
+  setFavicon(value);
 }
 
 export default function Nav() {
@@ -28,7 +35,9 @@ export default function Nav() {
 
   useEffect(() => {
     const current = document.documentElement.getAttribute("data-theme");
-    setThemeState(current === "light" ? "light" : "dark");
+    const resolved = current === "light" ? "light" : "dark";
+    setThemeState(resolved);
+    setFavicon(resolved);
   }, []);
 
   function toggleTheme() {

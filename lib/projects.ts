@@ -4,11 +4,13 @@ export interface ProjectItem {
   title: string;
   desc: string;
   tags: string[];
-  /** Optional live URL. Editable placeholder — set to a real URL to link out and show "Live ↗". */
+  /** Optional live/access URL. Editable placeholder — set to a real URL to show a "Live ↗" button. */
   live: string;
+  /** Optional GitHub repo URL. Editable placeholder — set to a real URL to show a "GitHub ↗" button. */
+  github?: string;
 }
 
-// Personal projects — placeholder content, edit freely. Set `live` to a URL to link out.
+// Personal projects — placeholder content, edit freely. Set `live`/`github` to a URL to show buttons.
 export const PROJECTS: ProjectItem[] = [
   {
     category: "OPEN SOURCE",
@@ -17,6 +19,7 @@ export const PROJECTS: ProjectItem[] = [
     desc: "A library of reusable Deluge helpers for common Zoho Creator patterns.",
     tags: ["Deluge", "Open Source"],
     live: "",
+    github: "",
   },
   {
     category: "WEB APP",
@@ -25,6 +28,7 @@ export const PROJECTS: ProjectItem[] = [
     desc: "A FastAPI service that extracts structured line items from messy invoice PDFs.",
     tags: ["FastAPI", "Python"],
     live: "",
+    github: "",
   },
   {
     category: "WEB APP",
@@ -33,6 +37,7 @@ export const PROJECTS: ProjectItem[] = [
     desc: "A small React + TypeScript app for tracking daily habits, built with Vite & zustand.",
     tags: ["React", "TypeScript"],
     live: "",
+    github: "",
   },
   {
     category: "TEMPLATE",
@@ -41,5 +46,6 @@ export const PROJECTS: ProjectItem[] = [
     desc: "An open, themeable portfolio template built with Next.js and Tailwind.",
     tags: ["Next.js", "Open Source"],
     live: "",
+    github: "",
   },
 ];

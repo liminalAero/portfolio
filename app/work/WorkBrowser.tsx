@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import type { WorkItem } from "@/lib/work";
 import type { ProjectItem } from "@/lib/projects";
+import { GithubIcon } from "@/components/icons";
 import styles from "./page.module.css";
 
 type Tab = "work" | "projects";
@@ -15,7 +16,7 @@ function uniqueTags(items: { tags: string[] }[]): string[] {
 }
 
 export default function WorkBrowser({ work, projects }: { work: WorkItem[]; projects: ProjectItem[] }) {
-  const [tab, setTab] = useState<Tab>("work");
+  const [tab, setTab] = useState<Tab>("projects");
   const [tag, setTag] = useState("All");
 
   const workTags = uniqueTags(work);
@@ -33,6 +34,25 @@ export default function WorkBrowser({ work, projects }: { work: WorkItem[]; proj
 
   return (
     <>
+      <section className={`section ${styles.tabsSection}`}>
+        <div className={styles.tabsBar}>
+          <button
+            type="button"
+            className={`${styles.tabBtn} ${tab === "projects" ? styles.tabBtnActive : ""}`}
+            onClick={() => selectTab("projects")}
+          >
+            Projects
+          </button>
+          <button
+            type="button"
+            className={`${styles.tabBtn} ${tab === "work" ? styles.tabBtnActive : ""}`}
+            onClick={() => selectTab("work")}
+          >
+            Work
+          </button>
+        </div>
+      </section>
+
       <section className={`section ${styles.headerSection}`}>
         <div className="eyebrow">{tab === "work" ? "// selected work" : "// personal projects"}</div>
         <h1 className={styles.pageTitle}>
@@ -43,25 +63,6 @@ export default function WorkBrowser({ work, projects }: { work: WorkItem[]; proj
             ? "A selection of applications, data pipelines and integrations built across the Zoho ecosystem — owned from spec through deployment."
             : "Side projects, experiments and open-source tools — where I try ideas outside of client work."}
         </p>
-      </section>
-
-      <section className={`section ${styles.tabsSection}`}>
-        <div className={styles.tabsBar}>
-          <button
-            type="button"
-            className={`${styles.tabBtn} ${tab === "work" ? styles.tabBtnActive : ""}`}
-            onClick={() => selectTab("work")}
-          >
-            Work
-          </button>
-          <button
-            type="button"
-            className={`${styles.tabBtn} ${tab === "projects" ? styles.tabBtnActive : ""}`}
-            onClick={() => selectTab("projects")}
-          >
-            Projects
-          </button>
-        </div>
       </section>
 
       <section className={`section ${styles.tagSection}`}>
@@ -104,20 +105,30 @@ export default function WorkBrowser({ work, projects }: { work: WorkItem[]; proj
         ) : (
           <div className={styles.cardGrid} key={`projects-${tag}`}>
             {visibleProjects.map((p) => (
-              <a
-                href={p.live || "#"}
-                key={p.title}
-                className={`surface fade-in ${styles.card}`}
-              >
+              <div className={`surface fade-in ${styles.card}`} key={p.title}>
                 <div className={styles.cardBlob}></div>
                 <div className={`mono ${styles.cardMeta}`}>{p.category} · {p.year}</div>
                 <h3 className={styles.cardTitle}>{p.title}</h3>
                 <p className={styles.cardDesc}>{p.desc}</p>
                 <div className={styles.cardTags}>
                   {p.tags.map((t) => <span className="tag-chip" key={t}>{t}</span>)}
-                  {p.live && <span className={`mono ${styles.liveTag}`}>Live ↗</span>}
                 </div>
-              </a>
+                {(p.github || p.live) && (
+                  <div className={styles.cardActions}>
+                    {p.github && (
+                      <a href={p.github} target="_blank" rel="noopener" className={styles.cardActionBtn}>
+                        <GithubIcon width={14} height={14} />
+                        GitHub ↗
+                      </a>
+                    )}
+                    {p.live && (
+                      <a href={p.live} target="_blank" rel="noopener" className={styles.cardActionBtn}>
+                        Live ↗
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         )}
