@@ -35,6 +35,14 @@
   color: var(--muted);
   text-decoration: none;
 }
+.footerIcon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+}
+.footerIcon:hover {
+  color: var(--ink);
+}
 .footerCopy {
   font-size: 13px;
   color: var(--faint);

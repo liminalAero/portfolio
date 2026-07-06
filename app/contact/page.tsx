@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { LINKEDIN_URL } from "@/lib/social";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -18,10 +18,6 @@ export default function ContactPage() {
           reach me is email.
         </p>
 
-        <div className={styles.ctas}>
-          <a href="mailto:akhiltechwiz@gmail.com" className="btn btn-primary">akhiltechwiz@gmail.com</a>
-        </div>
-
         <div className={styles.detailGrid}>
           <div className={styles.detailItem}>
             <div className={`mono ${styles.detailLabel}`}>EMAIL</div>
@@ -29,7 +25,7 @@ export default function ContactPage() {
           </div>
           <div className={styles.detailItem}>
             <div className={`mono ${styles.detailLabel}`}>LINKEDIN</div>
-            <Link href="/contact" className={styles.detailValue}>/in/akhil ↗</Link>
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener" className={styles.detailValue}>/in/aklvn ↗</a>
           </div>
           <div className={styles.detailItem}>
             <div className={`mono ${styles.detailLabel}`}>LOCATION</div>

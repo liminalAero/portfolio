@@ -1,5 +1,9 @@
 .hero {
-  padding-top: 80px;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 48px;
   padding-bottom: 48px;
 }
 .heroContent {
@@ -41,37 +45,27 @@
 }
 .heroCtas {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-top: 36px;
+}
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+}
+.iconBtn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 .tagRow {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   margin-top: 52px;
-}
-
-.contactCta {
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  padding: 44px 48px;
-  color: inherit;
-}
-.ctaTitle {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--ink);
-}
-.ctaSub {
-  font-size: 16px;
-  color: var(--muted);
-  margin-top: 6px;
-}
-.ctaBtn {
-  white-space: nowrap;
 }

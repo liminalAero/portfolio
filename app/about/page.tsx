@@ -80,6 +80,9 @@ export default function AboutPage() {
           <div>
             <div className="eyebrow">// about</div>
             <h1 className={styles.introTitle}>Seven years turning tangled operations into calm software.</h1>
+            <a href="/AkhilV_resume.pdf" target="_blank" className={`btn btn-secondary ${styles.resumeBtn}`}>
+              Download résumé ↓
+            </a>
           </div>
         </div>
       </section>
